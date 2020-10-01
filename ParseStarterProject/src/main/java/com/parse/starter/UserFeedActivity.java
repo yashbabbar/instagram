@@ -3,9 +3,8 @@ package com.parse.starter;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -33,7 +32,7 @@ public class UserFeedActivity extends AppCompatActivity {
 
         setTitle(username + "s Photos");
 
-        ParseQuery<ParseObject> query = new ParseQuery<ParseObject>("Image");
+        ParseQuery<ParseObject> query = new ParseQuery<>("Image");
         query.whereEqualTo("username",username);
         query.orderByDescending("createdAt");
         query.findInBackground(new FindCallback<ParseObject>() {
