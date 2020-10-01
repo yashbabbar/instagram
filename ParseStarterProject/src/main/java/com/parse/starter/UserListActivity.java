@@ -1,13 +1,13 @@
 package com.parse.starter;
+
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.provider.MediaStore;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -15,12 +15,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
@@ -50,7 +48,7 @@ public class UserListActivity extends AppCompatActivity {
 
         Uri selectedImages = data.getData();
 
-        if (requestCode == 1 && resultCode == RESULT_OK && data!= null) {
+        if (requestCode == 1 && resultCode == RESULT_OK) {
 
             try {
 
@@ -124,7 +122,7 @@ public class UserListActivity extends AppCompatActivity {
         setTitle("User List");
 
         listView = findViewById(R.id.userListView);
-        final ArrayList<String> usernames = new ArrayList<String>();
+        final ArrayList<String> usernames = new ArrayList<>();
         arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1,usernames);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -24,7 +24,8 @@
         android:layout_height="70dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/instagram" />
+        app:srcCompat="@drawable/instagram"
+        android:contentDescription="@string/todo" />
 
     <EditText
         android:id="@+id/usernameEditText"
@@ -34,8 +35,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="13dp"
         android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName" />
+        android:hint="@string/username"
+        android:inputType="textPersonName"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -45,8 +47,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/signUpButton"
@@ -56,7 +59,7 @@
         android:layout_below="@+id/passwordEditText"
         android:layout_marginTop="38dp"
         android:onClick="signUpClicked"
-        android:text="Sign Up" />
+        android:text="@string/sign_up" />
 
     <TextView
         android:id="@+id/loginTextView"
@@ -66,7 +69,7 @@
         android:layout_alignBottom="@+id/signUpButton"
         android:layout_marginStart="12dp"
         android:layout_toEndOf="@+id/signUpButton"
-        android:text="or, Login"
+        android:text="@string/or_login"
         android:textColor="@color/cast_libraries_material_featurehighlight_outer_highlight_default_color"
         android:textSize="20sp" />
 </RelativeLayout>
